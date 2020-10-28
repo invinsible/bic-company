@@ -117,6 +117,22 @@ body {
     }
 }
 
+.phone {
+    margin-top: -24px;
+
+    &__link {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    &__number {
+        font-size: 24px;
+        font-weight: 500;
+        color: #fff;
+    }
+}
+
 .promo {
     position: relative;
     height: 760px;
@@ -167,7 +183,7 @@ body {
     }
     
     &__title {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         font-size: 28px;
         font-weight: 700;
         text-transform: uppercase;
