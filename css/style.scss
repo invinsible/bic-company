@@ -360,3 +360,46 @@ h1, h2, h3, h4 {
         }
     }
 }
+
+
+.bic-video {
+    
+    &__catalog {
+        padding: 60px 45px;
+        background-color: #f3f2f2;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+        font-weight: 500;
+        color: #3c8a78;
+        opacity: 0.5;
+        filter: grayscale(1);
+        transition: opacity 0.3s, filter 0.3s;
+
+        &:hover {
+            opacity: 1;
+            filter: grayscale(0);
+        }
+    }
+
+    &__catalog-link {
+        font-size: 24px;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: #333333;
+    }
+}
