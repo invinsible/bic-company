@@ -141,6 +141,7 @@ h1, h2, h3, h4 {
 
 .title__sub-title {
   font-size: 24px;
+  max-width: 550px;
 }
 
 .main-nav {
@@ -315,11 +316,25 @@ h1, h2, h3, h4 {
 }
 
 .bic-inform {
-  padding: 125px 0 70px;
+  padding: 125px 0 60px;
   background-color: #e4e5e7;
 }
 
+.bic-inform__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bic-inform__left {
+  width: 52%;
+}
+
 .bic-inform__links {
+  margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,6 +345,19 @@ h1, h2, h3, h4 {
 
 .bic-inform__link {
   padding: 10px;
+  margin-right: 30px;
+  min-width: 180px;
+  max-width: 180px;
+  height: 155px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 20px;
   font-weight: 400;
   color: #fff;
@@ -340,5 +368,46 @@ h1, h2, h3, h4 {
 
 .bic-inform__link:nth-child(1) {
   background-color: #bcc1c9;
+}
+
+.bic-inform__link:nth-child(2) {
+  background-color: #8daabd;
+}
+
+.bic-inform__link:nth-child(3) {
+  background-color: #3c8a78;
+}
+
+.bic-inform__link:last-child {
+  margin-right: 0;
+}
+
+.cctvlens {
+  padding: 70px 0 40px;
+}
+
+.cctvlens__tab-btn {
+  padding: 8px 35px;
+  margin-right: 20px;
+  min-width: 190px;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px dotted #b7bfc9;
+  border-radius: 30px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.cctvlens__tab-btn:hover {
+  background-color: #3c8a78;
+  color: #fff;
+  border-color: #3c8a78;
+}
+
+.cctvlens__tab-btn:last-child {
+  margin-right: 0;
 }
 /*# sourceMappingURL=style.css.map */
