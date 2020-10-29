@@ -66,6 +66,11 @@ body {
     min-width: 320px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    color: #333333;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .container {
@@ -74,12 +79,57 @@ body {
     max-width: 1190px;
 }
 
+.link-ico {
+    font-size: 15px;
+    font-weight: 500;
+    color: #3c8a78;
+    transition: opacity 0.3s ease-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: '';
+        padding: 5px;
+        margin-right: 11px;
+        display: inline-block;
+        border: solid #3c8a78;
+        border-width: 0 4px 4px 0;
+        border-radius: 2px;
+        transform: rotate(-45deg);
+    }
+}
+
 .header {
     position: absolute;
     top: 0;
     lefT: 0;
     width: 100%;
     z-index: 9;
+}
+
+.title {
+    margin-bottom: 60px;
+
+    &__h2 {
+        font-size: 72px;        
+    }
+
+    &__h2.arrow::before {
+        margin-right: 25px;
+        border-width: 0 5px 5px 0;
+    }
+
+    &__sub-title {
+        font-size: 24px;
+        //max-width: 550px;
+    }
 }
 
 .main-nav {
@@ -106,6 +156,7 @@ body {
 
     &__link {
         font-size: 14px;
+        font-family: 'Roboto Condensed', sans-serif;
         font-weight: 700;
         color: #92a9be;
         text-transform: uppercase;
@@ -184,6 +235,7 @@ body {
     
     &__title {
         margin-bottom: 40px;
+        font-family: 'Roboto Condensed', sans-serif;
         font-size: 28px;
         font-weight: 700;
         text-transform: uppercase;
@@ -197,10 +249,55 @@ body {
         margin-bottom: 20px;
     }
 
-    &__link {        
-        font-size: 15px;
-        font-weight: 500;
+    &__link { 
         color: #fff;
         text-transform: uppercase;
+    }
+}
+
+.structure {
+    padding: 65px 0 90px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }   
+
+    &__item {
+        width: 25%;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-size: 24px;
+    }
+
+    &__text {
+        margin-bottom: 22px;
+    }
+}
+
+.bic-inform {
+    padding: 125px 0 70px;
+    background-color: #e4e5e7;
+    
+    &__links {
+        display: flex;
+        align-items: center;        
+    }
+
+    &__link {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        color: #fff;
+        text-align: center;
+        border-radius: 3px;
+        text-transform: uppercase;
+
+        &:nth-child(1) {
+            background-color: #bcc1c9;
+        }
     }
 }
