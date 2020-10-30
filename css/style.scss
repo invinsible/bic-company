@@ -80,12 +80,16 @@ h1, h2, h3, h4 {
 }
 
 .link-ico {
+    padding-left: 20px;
     font-size: 15px;
     font-weight: 500;
     color: #3c8a78;
-    transition: opacity 0.3s ease-out;
+    background-image: url('/img/link_ico.png');
+    background-repeat: no-repeat;
+    transition: opacity 0.3s ease-out, padding 0.3s;
 
     &:hover {
+        padding-left: 22px;
         opacity: 0.7;
     }
 }
