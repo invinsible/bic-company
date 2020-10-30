@@ -80,7 +80,7 @@ h1, h2, h3, h4 {
 }
 
 .link-ico {
-    padding-left: 20px;
+    padding-left: 25px;
     font-size: 15px;
     font-weight: 500;
     color: #3c8a78;
@@ -88,8 +88,12 @@ h1, h2, h3, h4 {
     background-repeat: no-repeat;
     transition: opacity 0.3s ease-out, padding 0.3s;
 
+    &--w {
+        background-image: url('/img/link_ico_w.png');
+    }
+
     &:hover {
-        padding-left: 22px;
+        padding-left: 27px;
         opacity: 0.7;
     }
 }
@@ -361,6 +365,7 @@ h1, h2, h3, h4 {
         background-color: transparent;
         border: 2px dotted #b7bfc9;
         border-radius: 30px;
+        transition: all 0.25s;
         outline: 0;
         cursor: pointer;
 
@@ -410,6 +415,7 @@ h1, h2, h3, h4 {
         color: #a0a9b3;
         border: 2px solid #b3bcc7;
         border-radius: 30px;
+        transition: all 0.25s;
 
         &:hover {
             background-color: #3c8a78;
