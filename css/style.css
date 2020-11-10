@@ -754,6 +754,12 @@ a:not([class]):hover {
   border-color: #3c8a78;
 }
 
+.partners__btn:disabled {
+  opacity: 0.3;
+  cursor: auto;
+  pointer-events: none;
+}
+
 .vacancy {
   padding: 70px 0 45px;
 }

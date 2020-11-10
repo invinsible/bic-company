@@ -647,6 +647,12 @@ a:not([class]) {
             color: #fff;
             border-color: #3c8a78;
         }
+
+        &:disabled {
+            opacity: 0.3;
+            cursor: auto;
+            pointer-events: none;
+        }
     }
 }
 
