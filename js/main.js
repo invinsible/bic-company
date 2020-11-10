@@ -1,6 +1,6 @@
-let acc = document.getElementsByClassName("accordion__btn");
-for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+const acBtns = document.querySelectorAll(".accordion__btn");
+
+function accordionHandler() {
     this.classList.toggle("active");
     let panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
@@ -8,5 +8,8 @@ for (let i = 0; i < acc.length; i++) {
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
-  });
 }
+
+acBtns.forEach(function(btn) {
+	btn.addEventListener("click", accordionHandler)
+});

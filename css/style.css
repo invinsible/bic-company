@@ -725,6 +725,10 @@ a:not([class]):hover {
   border-color: #3c8a78;
 }
 
+.vacancy {
+  padding: 70px 0 45px;
+}
+
 .vacancy__text {
   max-width: 880px;
 }
@@ -799,6 +803,21 @@ a:not([class]):hover {
 .accordion__panel ul {
   margin: 7px 0;
   list-style: none;
+}
+
+.news {
+  padding: 45px 0;
+}
+
+.contacts {
+  padding: 45px 0 60px;
+}
+
+.contacts__map {
+  margin-bottom: 50px;
+  width: 100%;
+  height: 500px;
+  background-color: #ccc;
 }
 
 .footer {

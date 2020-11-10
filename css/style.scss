@@ -623,6 +623,7 @@ a:not([class]) {
 }
 
 .vacancy {
+    padding: 70px 0 45px;
 
     &__text {
         max-width: 880px;
@@ -689,6 +690,21 @@ a:not([class]) {
             margin: 7px 0;
             list-style: none;
         }
+    }
+}
+
+.news {
+    padding: 45px 0;
+}
+
+.contacts {
+    padding: 45px 0 60px;
+
+    &__map {
+        margin-bottom: 50px;
+        width: 100%;
+        height: 500px;
+        background-color: #ccc;
     }
 }
 
