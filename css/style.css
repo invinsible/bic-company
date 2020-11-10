@@ -603,6 +603,15 @@ a:not([class]):hover {
   color: #333333;
 }
 
+.bic-video__catalog-link.arrow::before {
+  -webkit-transition: margin-right 0.25s;
+  transition: margin-right 0.25s;
+}
+
+.bic-video__catalog-link.arrow:hover::before {
+  margin-right: 14px;
+}
+
 .service {
   padding: 90px 0 155px;
   background-color: #f3f2f2;

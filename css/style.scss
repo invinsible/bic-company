@@ -526,7 +526,17 @@ a:not([class]) {
     &__catalog-link {
         font-size: 24px;
         font-family: 'Roboto Condensed', sans-serif;
-        color: #333333;
+        color: #333333;       
+    }
+
+    &__catalog-link.arrow::before {
+        transition: margin-right 0.25s;
+    }
+
+    &__catalog-link.arrow:hover {
+        &::before {
+            margin-right: 14px;
+        }
     }
 }
 
