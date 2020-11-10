@@ -95,6 +95,28 @@ a:not([class]) {
     max-width: 1190px;
 }
 
+.green-btn {    
+    padding: 13px 35px 13px 50px;
+    margin: 20px 0 20px auto;
+    display: block;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: #3c8a78;
+    background-image: url(/img/pencil_ico.png);
+    background-repeat: no-repeat;
+    background-position: 19px 11px;
+    transition: background-color 0.25s;
+    outline: none;
+    cursor: pointer;    
+
+    &:hover {
+        background-color: #aba6a6;
+    }
+}
+
 .link-ico {
     padding-left: 25px;
     font-size: 15px;
@@ -590,14 +612,20 @@ a:not([class]) {
 
     &__list {        
         margin-bottom: 70px;
+        max-height: 77px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        overflow: hidden;
     }
 
     &__item {
         margin-bottom: 40px;
         width: 20%;
+
+        img {
+            margin: auto;
+        }
     }
 
     &__btn {
@@ -680,8 +708,7 @@ a:not([class]) {
         transition: transform 0.2s ease-out;
     }
 
-    &__panel {   
-        max-width: 900px;     
+    &__panel {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
@@ -690,6 +717,10 @@ a:not([class]) {
             margin: 7px 0;
             list-style: none;
         }
+    }
+
+    &__wrapper {
+        max-width: 900px; 
     }
 }
 
