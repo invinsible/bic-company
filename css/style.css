@@ -182,6 +182,18 @@ a:not([class]):hover {
   font-size: 72px;
 }
 
+@media (max-width: 870px) {
+  .title__h2 {
+    font-size: 62px;
+  }
+}
+
+@media (max-width: 405px) {
+  .title__h2 {
+    font-size: 45px;
+  }
+}
+
 .title__h2.arrow::before {
   margin-right: 25px;
   border-width: 0 5px 5px 0;
@@ -190,6 +202,30 @@ a:not([class]):hover {
 .title__sub-title {
   font-size: 24px;
   max-width: 600px;
+}
+
+@media (max-width: 870px) {
+  .title__sub-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 405px) {
+  .title__sub-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 870px) {
+  .title {
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 405px) {
+  .title {
+    margin-bottom: 27px;
+  }
 }
 
 .main-nav {
@@ -223,6 +259,12 @@ a:not([class]):hover {
   margin-right: 0;
 }
 
+@media (max-width: 970px) {
+  .menu__item {
+    margin-right: 25px;
+  }
+}
+
 .menu__link {
   font-size: 14px;
   font-family: 'Roboto Condensed', sans-serif;
@@ -237,20 +279,72 @@ a:not([class]):hover {
   color: #ffffff;
 }
 
+@media (max-width: 895px) {
+  .menu {
+    display: none;
+  }
+}
+
 .phone {
-  margin-top: -24px;
+  margin-top: -35px;
+}
+
+.phone__switch {
+  margin-bottom: 10px;
+  text-align: right;
 }
 
 .phone__link {
+  margin-right: 10px;
+  display: inline-block;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
   color: #fff;
+  opacity: 0.4;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.phone__link:last-child {
+  margin-right: 0;
+}
+
+.phone__link:hover {
+  opacity: 1;
+}
+
+.phone__link.active {
+  opacity: 1;
 }
 
 .phone__number {
   font-size: 24px;
   font-weight: 500;
   color: #fff;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.phone__number:hover {
+  opacity: 0.82;
+}
+
+.phone__number:hover .phone__icon {
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.phone__icon {
+  margin-right: 10px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("/img/phone-ico.png");
+  background-repeat: no-repeat;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
 }
 
 .promo {
@@ -334,6 +428,12 @@ a:not([class]):hover {
   text-transform: uppercase;
 }
 
+@media (max-width: 1280px) {
+  .main-news {
+    padding: 22px 9px 25px 40px;
+  }
+}
+
 .structure {
   padding: 65px 0 90px;
 }
@@ -342,21 +442,43 @@ a:not([class]):hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 905px) {
+  .structure__wrapper {
+    margin-bottom: -50px;
+  }
 }
 
 .structure__item {
   width: 25%;
 }
 
+@media (max-width: 905px) {
+  .structure__item {
+    margin-bottom: 50px;
+    width: 48%;
+  }
+}
+
 .structure__title {
   margin-bottom: 24px;
   font-size: 24px;
+}
+
+@media (max-width: 470px) {
+  .structure__title {
+    margin-bottom: 21px;
+    font-size: 20px;
+  }
 }
 
 .structure__text {
@@ -381,6 +503,22 @@ a:not([class]):hover {
   width: 52%;
 }
 
+@media (max-width: 1024px) {
+  .bic-inform__left {
+    width: 100%;
+  }
+}
+
+.bic-inform__right {
+  width: 40%;
+}
+
+@media (max-width: 750px) {
+  .bic-inform__right {
+    display: none;
+  }
+}
+
 .bic-inform__links {
   margin-top: 60px;
   display: -webkit-box;
@@ -389,6 +527,8 @@ a:not([class]):hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .bic-inform__link {
@@ -428,6 +568,37 @@ a:not([class]):hover {
 
 .bic-inform__link:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 950px) {
+  .bic-inform__link {
+    min-width: 130px;
+    max-width: 130px;
+    height: 130px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 779px) {
+  .bic-inform__link {
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 950px) {
+  .bic-inform {
+    padding: 65px 0 60px;
+  }
+}
+
+@media (max-width: 750px) {
+  .bic-inform {
+    background-image: url(/img/bvs6.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: right bottom;
+  }
 }
 
 .cctvlens {
@@ -536,10 +707,18 @@ a:not([class]):hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .bic-video__left {
   width: 55%;
+}
+
+@media (max-width: 940px) {
+  .bic-video__left {
+    width: 100%;
+  }
 }
 
 .bic-video__right {
@@ -547,9 +726,21 @@ a:not([class]):hover {
   width: 37%;
 }
 
+@media (max-width: 940px) {
+  .bic-video__right {
+    width: 100%;
+  }
+}
+
 .bic-video__catalog {
   padding: 60px 45px;
   background-color: #f3f2f2;
+}
+
+@media (max-width: 940px) {
+  .bic-video__catalog {
+    padding: 20px 15px;
+  }
 }
 
 .bic-video__list {
@@ -570,6 +761,22 @@ a:not([class]):hover {
 .bic-video__box {
   display: block;
   margin-top: 60px;
+}
+
+@media (max-width: 940px) {
+  .bic-video__box {
+    margin-top: 30px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 310px;
+  }
+}
+
+@media (max-width: 700px) {
+  .bic-video__box {
+    margin-top: 15px;
+    width: 250px;
+  }
 }
 
 .bic-video__link {
@@ -627,14 +834,34 @@ a:not([class]):hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .service__left {
   width: 40%;
 }
 
+@media (max-width: 990px) {
+  .service__left {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .service__right {
   width: 55%;
+}
+
+@media (max-width: 990px) {
+  .service__right {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .service__text {
@@ -898,5 +1125,16 @@ a:not([class]):hover {
 .footer {
   padding: 35px 0 38px;
   background-color: #333333;
+}
+
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=style.css.map */

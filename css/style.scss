@@ -164,7 +164,15 @@ a:not([class]) {
     margin-bottom: 60px;
 
     &__h2 {
-        font-size: 72px;        
+        font-size: 72px;
+
+        @media(max-width: 870px) {
+            font-size: 62px;
+        }
+
+        @media(max-width: 405px) {
+            font-size: 45px;
+        }
     }
 
     &__h2.arrow::before {
@@ -175,6 +183,22 @@ a:not([class]) {
     &__sub-title {
         font-size: 24px;
         max-width: 600px;
+
+        @media(max-width: 870px) {
+            font-size: 20px;
+        }
+
+        @media(max-width: 405px) {
+            font-size: 16px;
+        }
+    }
+
+    @media(max-width: 870px) {
+        margin-bottom: 45px;
+    }
+
+    @media(max-width: 405px) {
+        margin-bottom: 27px;
     }
 }
 
@@ -198,6 +222,10 @@ a:not([class]) {
         &:last-child {
             margin-right: 0;
         }
+
+        @media(max-width: 970px) {
+            margin-right: 25px;
+        }       
     }
 
     &__link {
@@ -212,21 +240,65 @@ a:not([class]) {
             color: #ffffff;
         }
     }
+
+    @media(max-width: 895px) {
+        display: none;    
+    }
 }
 
 .phone {
-    margin-top: -24px;
+    margin-top: -35px;
+
+    &__switch {
+        margin-bottom: 10px;
+        text-align: right;
+    }
 
     &__link {
+        margin-right: 10px;
+        display: inline-block;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 500;
         color: #fff;
+        opacity: 0.4;
+        transition: opacity 0.2s;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__link.active {
+        opacity: 1;
     }
 
     &__number {
         font-size: 24px;
         font-weight: 500;
         color: #fff;
+        transition: opacity 0.25s;
+
+        &:hover {
+            opacity: 0.82;
+
+            .phone__icon{
+                transform: rotate(20deg);
+            }
+        }
+    }
+
+    &__icon {
+        margin-right: 10px;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-image: url('/img/phone-ico.png');
+        background-repeat: no-repeat;
+        transition: transform 0.25s;
     }
 }
 
@@ -299,28 +371,47 @@ a:not([class]) {
         color: #fff;
         text-transform: uppercase;
     }
-}
+
+    @media(max-width: 1280px) {
+        padding: 22px 9px 25px 40px;
+    }
+ }
 
 .structure {
     padding: 65px 0 90px;
 
     &__wrapper {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media(max-width: 905px) {
+            margin-bottom: -50px;            
+        }
     }   
 
     &__item {
         width: 25%;
+
+        @media(max-width: 905px) {
+            margin-bottom: 50px;
+            width: 48%;
+        }
     }
 
     &__title {
         margin-bottom: 24px;
         font-size: 24px;
+
+        @media(max-width: 470px) {
+            margin-bottom: 21px;
+            font-size: 20px;
+        }
     }
 
     &__text {
-        margin-bottom: 22px;
+        margin-bottom: 22px;        
     }
 }
 
@@ -335,12 +426,24 @@ a:not([class]) {
 
     &__left {
         width: 52%;
+
+        @media(max-width: 1024px) {
+            width: 100%;
+        }
+    }
+
+    &__right {
+        width: 40%;
+        @media(max-width: 750px) {
+            display: none;
+        }
     }
     
     &__links {
         margin-top: 60px;
         display: flex;
-        align-items: center;        
+        align-items: center;    
+        flex-wrap: wrap;    
     }
 
     &__link {
@@ -351,7 +454,7 @@ a:not([class]) {
         height: 155px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center;        
         font-size: 20px;
         font-weight: 400;
         color: #fff;
@@ -374,6 +477,29 @@ a:not([class]) {
         &:last-child {
             margin-right: 0;
         }
+
+        @media(max-width: 950px) {
+            min-width: 130px;
+            max-width: 130px;
+            height: 130px;
+            font-size: 14px;
+        }
+
+        @media(max-width: 779px) {
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media(max-width: 950px) {
+        padding: 65px 0 60px;
+    }
+
+    @media(max-width: 750px) {
+        background-image: url(/img/bvs6.png);
+        background-repeat: no-repeat;
+        background-size: 30%;
+        background-position: right bottom;
     }
 }
 
@@ -471,20 +597,33 @@ a:not([class]) {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__left {
         width: 55%;
+
+        @media(max-width: 940px) {
+            width: 100%;
+        }
     }
 
     &__right {
         margin-top: 35px;
         width: 37%;
+
+        @media(max-width: 940px) {
+            width: 100%;
+        }
     }
     
     &__catalog {
         padding: 60px 45px;
         background-color: #f3f2f2;
+
+        @media(max-width: 940px) {
+            padding: 20px 15px;
+        }
     }
 
     &__list {
@@ -494,13 +633,24 @@ a:not([class]) {
     }
 
     &__item {
-        width: 33.33%;
-        //margin-right: 50px;        
+        width: 33.33%;     
     }
 
     &__box {
         display: block;
         margin-top: 60px;
+
+        @media(max-width: 940px) {
+            margin-top: 30px;
+            margin-right: 10px;
+            display: inline-block;
+            width: 310px;
+        }
+
+        @media(max-width: 700px) {  
+            margin-top: 15px;          
+            width: 250px;
+        }
     }
 
     &__link {
@@ -548,14 +698,25 @@ a:not([class]) {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;        
     }
 
     &__left {
         width: 40%;
+
+        @media(max-width: 990px) {
+            width: 100%;
+            order: 2;
+        }
     }
 
     &__right {
-        width: 55%;        
+        width: 55%; 
+        
+        @media(max-width: 990px) {
+            width: 100%;
+            order: 1;
+        }
     }
 
     &__text {
@@ -781,4 +942,10 @@ a:not([class]) {
 .footer {
     padding: 35px 0 38px;
     background-color: #333333;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
