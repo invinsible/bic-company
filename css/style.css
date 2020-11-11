@@ -96,6 +96,20 @@ a:not([class]):hover {
   font-size: 72px;
 }
 
+@media (max-width: 870px) {
+  .site-title {
+    margin-bottom: 47px;
+    font-size: 62px;
+  }
+}
+
+@media (max-width: 405px) {
+  .site-title {
+    margin-bottom: 27px;
+    font-size: 45px;
+  }
+}
+
 .container {
   padding: 0 15px;
   margin: 0 auto;
@@ -197,6 +211,12 @@ a:not([class]):hover {
 .title__h2.arrow::before {
   margin-right: 25px;
   border-width: 0 5px 5px 0;
+}
+
+@media (max-width: 550px) {
+  .title__h2.arrow::before {
+    margin-right: 10px;
+  }
 }
 
 .title__sub-title {
@@ -375,6 +395,12 @@ a:not([class]):hover {
   line-height: 0.95;
 }
 
+@media (max-width: 900px) {
+  .promo__title {
+    font-size: 50px;
+  }
+}
+
 .promo__subtitle {
   margin-top: 24px;
   font-size: 24px;
@@ -434,6 +460,12 @@ a:not([class]):hover {
   }
 }
 
+@media (max-width: 700px) {
+  .main-news {
+    display: none;
+  }
+}
+
 .structure {
   padding: 65px 0 90px;
 }
@@ -466,6 +498,13 @@ a:not([class]):hover {
   .structure__item {
     margin-bottom: 50px;
     width: 48%;
+  }
+}
+
+@media (max-width: 360px) {
+  .structure__item {
+    margin-bottom: 25px;
+    width: 100%;
   }
 }
 
@@ -588,16 +627,16 @@ a:not([class]):hover {
 
 @media (max-width: 950px) {
   .bic-inform {
-    padding: 65px 0 60px;
+    padding: 45px 0;
   }
 }
 
 @media (max-width: 750px) {
   .bic-inform {
-    background-image: url(/img/bvs6.png);
+    background-image: url(/img/bvs6_bg.png);
     background-repeat: no-repeat;
-    background-size: 30%;
-    background-position: right bottom;
+    background-size: 35%;
+    background-position: 93% 95%;
   }
 }
 
@@ -678,7 +717,6 @@ a:not([class]):hover {
   margin-top: 25px;
   display: inline-block;
   padding: 8px 35px;
-  min-width: 190px;
   font-weight: 500;
   color: #a0a9b3;
   border: 2px solid #b3bcc7;
@@ -691,6 +729,12 @@ a:not([class]):hover {
   background-color: #3c8a78;
   color: #fff;
   border-color: #3c8a78;
+}
+
+@media (max-width: 950px) {
+  .cctvlens {
+    padding: 45px 0;
+  }
 }
 
 .bic-video {
@@ -758,6 +802,12 @@ a:not([class]):hover {
   width: 33.33%;
 }
 
+@media (max-width: 560px) {
+  .bic-video__item {
+    width: 48%;
+  }
+}
+
 .bic-video__box {
   display: block;
   margin-top: 60px;
@@ -819,6 +869,12 @@ a:not([class]):hover {
   margin-right: 14px;
 }
 
+@media (max-width: 950px) {
+  .bic-video {
+    padding: 45px 0;
+  }
+}
+
 .service {
   padding: 90px 0 155px;
   background-color: #f3f2f2;
@@ -873,6 +929,8 @@ a:not([class]):hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .service__item {
@@ -887,6 +945,18 @@ a:not([class]):hover {
 .service__item p {
   font-size: 14px;
   font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .service__item {
+    width: 48%;
+  }
+}
+
+@media (max-width: 950px) {
+  .service {
+    padding: 45px 0;
+  }
 }
 
 .service-form {
@@ -1022,6 +1092,12 @@ a:not([class]):hover {
   opacity: 0.3;
   cursor: auto;
   pointer-events: none;
+}
+
+@media (max-width: 950px) {
+  .partners {
+    padding: 45px 0;
+  }
 }
 
 .vacancy {
