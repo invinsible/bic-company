@@ -19,3 +19,15 @@ for (let i = 0; i < acBtns.length; i++) {
         }
     });
 }
+
+$(document).ready(function (){
+    $('.scrollLink').click(function (e){
+        e.preventDefault();
+        let href = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(href).offset().top
+        }, 1000);
+    });
+});
+
+
