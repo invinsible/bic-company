@@ -975,6 +975,59 @@ a:not([class]) {
 
 .news {
     padding: 45px 0;
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__left,
+    &__right {
+        width: 47%;
+    }
+
+    &__btn {
+        padding: 20px 27px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: background-color 0.25s;
+
+        &:hover {
+            background-color: #f9f9f9;
+        }
+    }
+
+    &__btn.active {        
+        border-color: #278f8e;
+    }
+
+    &__image {
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        font-size: 27px;
+        line-height: 1.2;
+    }
+
+    &__date {
+        margin-bottom: 12px;
+        font-size: 12px;
+        font-weight: 500;
+
+        a {
+            border-bottom: 0;
+        }
+    }
+
+    &__text {
+        p {
+            margin-bottom: 8px;
+        }
+    }
 }
 
 .contacts {

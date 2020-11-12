@@ -39,7 +39,7 @@ $(document).ready(function (){
         curentTabBody.siblings().hide();
         curentTabBody.fadeIn();
             
-        $('.tabBtn').removeClass('active');
+        $(this).siblings().removeClass('active');
         $(this).addClass('active');
     });
 });

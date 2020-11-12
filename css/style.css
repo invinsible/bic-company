@@ -1185,6 +1185,64 @@ a:not([class]):hover {
   padding: 45px 0;
 }
 
+.news__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news__left, .news__right {
+  width: 47%;
+}
+
+.news__btn {
+  padding: 20px 27px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+.news__btn:hover {
+  background-color: #f9f9f9;
+}
+
+.news__btn.active {
+  border-color: #278f8e;
+}
+
+.news__image {
+  margin-bottom: 15px;
+}
+
+.news__title {
+  margin-bottom: 30px;
+  font-size: 27px;
+  line-height: 1.2;
+}
+
+.news__date {
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.news__date a {
+  border-bottom: 0;
+}
+
+.news__text p {
+  margin-bottom: 8px;
+}
+
 .contacts {
   padding: 45px 0 60px;
 }
