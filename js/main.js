@@ -32,12 +32,12 @@ $(document).ready(function (){
 
 
     $('.tabBody').hide();
-    $('.tabBody:first').show();    
+    $('.tabContainer > .tabBody:first-child').show();    
     
-    $('.tabBtn').click(function() {
-        $('.tabBody').hide();
-        let activeTab = $(this).attr('rel');
-        $('#' + activeTab).fadeIn();
+    $('.tabBtn').click(function() { 
+        let curentTabBody = $('#' + $(this).attr('rel'));
+        curentTabBody.siblings().hide();
+        curentTabBody.fadeIn();
             
         $('.tabBtn').removeClass('active');
         $(this).addClass('active');
