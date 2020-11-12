@@ -852,12 +852,10 @@ a:not([class]) {
     }
 
     &__list {        
-        margin-bottom: 50px;
-        max-height: 77px;
+        margin-bottom: 50px;        
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        overflow: hidden;
+        justify-content: center;        
     }
 
     &__item {

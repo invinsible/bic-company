@@ -1,12 +1,4 @@
 const acBtns = document.querySelectorAll('.accordion__btn');
-const showMore = document.querySelector('.showMore');
-
-showMore.addEventListener('click', function() {
-    this.previousElementSibling.style.maxHeight = 100 + '%';
-    this.style.display = 'none';
-    this.disabled = true;
-});
-
 
 for (let i = 0; i < acBtns.length; i++) {
     acBtns[i].addEventListener('click', function(){
@@ -21,12 +13,34 @@ for (let i = 0; i < acBtns.length; i++) {
 }
 
 $(document).ready(function (){
+
+    const partnerKey = $('.partners__item:nth-child(5)');
+    partnerKey.nextAll().hide();
+    $('.showMore').click(function(){
+        partnerKey.nextAll().show();
+        $(this).prop('disabled', true)
+    });
+
+
     $('.scrollLink').click(function (e){
         e.preventDefault();
         let href = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(href).offset().top
         }, 1000);
+    });
+
+
+    $('.tabBody').hide();
+    $('.tabBody:first').show();    
+    
+    $('.tabBtn').click(function() {
+        $('.tabBody').hide();
+        let activeTab = $(this).attr('rel');
+        $('#' + activeTab).fadeIn();
+            
+        $('.tabBtn').removeClass('active');
+        $(this).addClass('active');
     });
 });
 

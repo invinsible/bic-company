@@ -1045,7 +1045,6 @@ a:not([class]):hover {
 
 .partners__list {
   margin-bottom: 50px;
-  max-height: 77px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1054,7 +1053,6 @@ a:not([class]):hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
 }
 
 .partners__item {
