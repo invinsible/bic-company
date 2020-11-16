@@ -261,6 +261,12 @@ a:not([class]):hover {
           justify-content: space-between;
 }
 
+@media (max-width: 450px) {
+  .main-nav .logo img {
+    width: 55px;
+  }
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -352,6 +358,12 @@ a:not([class]):hover {
 .phone__number:hover .phone__icon {
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
+}
+
+@media (max-width: 350px) {
+  .phone__number {
+    font-size: 19px;
+  }
 }
 
 .phone__icon {
@@ -626,6 +638,8 @@ a:not([class]):hover {
   text-align: center;
   border-radius: 3px;
   text-transform: uppercase;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .bic-inform__link:nth-child(1) {
@@ -642,6 +656,10 @@ a:not([class]):hover {
 
 .bic-inform__link:last-child {
   margin-right: 0;
+}
+
+.bic-inform__link:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 950px) {
@@ -887,6 +905,12 @@ a:not([class]):hover {
 .bic-video__box {
   display: block;
   margin-top: 60px;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.bic-video__box:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 940px) {
@@ -1149,6 +1173,18 @@ a:not([class]):hover {
   margin: auto;
 }
 
+@media (max-width: 890px) {
+  .partners__item {
+    width: 33%;
+  }
+}
+
+@media (max-width: 570px) {
+  .partners__item {
+    width: 50%;
+  }
+}
+
 .partners__btn {
   padding: 8px 35px;
   margin: auto;
@@ -1235,6 +1271,12 @@ a:not([class]):hover {
 .accordion__title {
   margin-bottom: 15px;
   font-size: 28px;
+}
+
+@media (max-width: 550px) {
+  .accordion__title {
+    font-size: 24px;
+  }
 }
 
 .accordion__right {

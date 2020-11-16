@@ -221,6 +221,12 @@ a:not([class]) {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .logo img{
+        @media(max-width: 450px) {
+            width: 55px;
+        }
+    }
 }
 
 .menu {
@@ -302,6 +308,10 @@ a:not([class]) {
             .phone__icon{
                 transform: rotate(20deg);
             }
+        }
+
+        @media(max-width: 350px) {
+            font-size: 19px;
         }
     }
 
@@ -514,6 +524,7 @@ a:not([class]) {
         text-align: center;
         border-radius: 3px;
         text-transform: uppercase;
+        transition: opacity 0.25s ease-in-out;
 
         &:nth-child(1) {
             background-color: #bcc1c9;
@@ -529,6 +540,10 @@ a:not([class]) {
 
         &:last-child {
             margin-right: 0;
+        }
+
+        &:hover {
+            opacity: 0.8;
         }
 
         @media(max-width: 950px) {
@@ -723,6 +738,11 @@ a:not([class]) {
     &__box {
         display: block;
         margin-top: 60px;
+        transition: opacity 0.25s ease-in-out;
+
+        &:hover {
+            opacity: 0.8;
+        }
 
         @media(max-width: 940px) {
             margin-top: 30px;
@@ -908,7 +928,7 @@ a:not([class]) {
         margin-bottom: 95px;
     }
 
-    &__list {        
+    &__list {
         margin-bottom: 50px;        
         display: flex;
         flex-wrap: wrap;
@@ -921,6 +941,14 @@ a:not([class]) {
 
         img {
             margin: auto;
+        }
+
+        @media(max-width: 890px) {
+            width: 33%;
+        }
+
+        @media(max-width: 570px) {
+            width: 50%;
         }
     }
 
@@ -1004,6 +1032,10 @@ a:not([class]) {
     &__title {
         margin-bottom: 15px;
         font-size: 28px;
+
+        @media(max-width: 550px) {
+            font-size: 24px;
+        }
     }
 
     &__right {
