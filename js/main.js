@@ -58,20 +58,20 @@ ymaps.ready(function(){
     let coords = [
         {
             cd: [ 59.905295421119,30.270380973816 ],
-            title: 'БИК-Информ Главный офис',
+            title: 'БИК-Информ Главный офис / БИК Торговый Дом Главный офис',
             adress: 'ул. Бумажная, д. 9, корп. 1, литер А',
             mail: 'bic@bic-inform.ru',
             site: 'bic-inform.ru',
             phone: '+7 (812) 447-95-55'
         },
-        {
-            cd: [ 59.905295421119,30.270380973816 ],
-            title: 'БИК Торговый Дом Главный офис',
-            adress: 'ул. Бумажная, д. 9, корп. 1, литер А',
-            mail: 'opt@bic-video.ru',
-            site: 'bic-video.ru',
-            phone: '+7 (812) 447-95-57'
-        },
+        // {
+        //     cd: [ 59.905295421119,30.270380973816 ],
+        //     title: 'БИК Торговый Дом Главный офис',
+        //     adress: 'ул. Бумажная, д. 9, корп. 1, литер А',
+        //     mail: 'opt@bic-video.ru',
+        //     site: 'bic-video.ru',
+        //     phone: '+7 (812) 447-95-57'
+        // },
         {
             cd: [ 59.90198268955941,30.274680805557256 ],
             title: 'БИК Торговый Дом офис м. Нарвская',
@@ -102,23 +102,43 @@ ymaps.ready(function(){
         }
       ];
 
-      let myCollection = new ymaps.GeoObjectCollection({},{
-        iconLayout: 'default#image',
-        iconImageHref: '/img/marker.png',
-        iconImageSize: [41, 58],
-        iconImageOffset: [0, -58],
-    });
+    // let myCollection = new ymaps.GeoObjectCollection({},{
+    //     iconLayout: 'default#image',
+    //     iconImageHref: '/img/location_mark.svg',
+    //     iconImageSize: [41, 58],
+    //     iconImageOffset: [0, -58],
+    // });
 
-    for (let i = 0; i < coords.length; i++) {
-    myCollection.add(
-        new ymaps.Placemark(coords[i].cd, {
+    // for (let i = 0; i < coords.length; i++) {
+    //     myCollection.add(
+    //         new ymaps.Placemark(coords[i].cd, {
+    //         balloonContentHeader: coords[i].title,
+    //         balloonContentBody: coords[i].phone + '<br>' + coords[i].adress + '<br>' + '<a href="mailto:'+ coords[i].mail +'" target="_blank">'+ coords[i].mail + '</a>',
+    //         balloonContentFooter: '<a href="tel:'+ coords[i].phone + '">'+ coords[i].phone + '</a>'
+    //         })
+    //     );
+    // }
+
+    var myGeoObjects = [];
+
+    for (var i = 0; i<coords.length; i++) {
+    myGeoObjects[i] = new ymaps.Placemark(coords[i].cd, {
         balloonContentHeader: coords[i].title,
         balloonContentBody: coords[i].phone + '<br>' + coords[i].adress + '<br>' + '<a href="mailto:'+ coords[i].mail +'" target="_blank">'+ coords[i].mail + '</a>',
         balloonContentFooter: '<a href="tel:'+ coords[i].phone + '">'+ coords[i].phone + '</a>'
-        })
-    );
+    }, {
+        iconLayout: 'default#image',
+        iconImageHref: '/img/location_mark.svg',
+        iconImageSize: [41, 58],
+        iconImageOffset: [0, -58]        
+    });
     }
+
+    var myClusterer = new ymaps.Clusterer({preset: 'islands#invertedDarkGreenClusterIcons'});
+    myClusterer.add(myGeoObjects);
+    myMap.geoObjects.add(myClusterer);
+   
       
-    myMap.geoObjects.add(myCollection);  
+    //myMap.geoObjects.add(myCollection);  
   
 });
