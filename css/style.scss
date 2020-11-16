@@ -1030,14 +1030,35 @@ a:not([class]) {
     }
 }
 
-.contacts {
+.contacts {    
     padding: 45px 0 60px;
+
+    .accordion__btn.active + .accordion__panel {
+        padding-bottom: 25px;
+        border-bottom: 1px solid #d5dee4;
+    }
 
     &__map {
         margin-bottom: 50px;
         width: 100%;
         height: 500px;
         background-color: #ccc;
+    }
+
+    &__info {        
+
+        a {
+            color: #333333;
+            border-bottom: none;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        span {
+            font-weight: 500;
+        }
     }
 }
 
