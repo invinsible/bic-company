@@ -102,23 +102,6 @@ ymaps.ready(function(){
         }
       ];
 
-    // let myCollection = new ymaps.GeoObjectCollection({},{
-    //     iconLayout: 'default#image',
-    //     iconImageHref: '/img/location_mark.svg',
-    //     iconImageSize: [41, 58],
-    //     iconImageOffset: [0, -58],
-    // });
-
-    // for (let i = 0; i < coords.length; i++) {
-    //     myCollection.add(
-    //         new ymaps.Placemark(coords[i].cd, {
-    //         balloonContentHeader: coords[i].title,
-    //         balloonContentBody: coords[i].phone + '<br>' + coords[i].adress + '<br>' + '<a href="mailto:'+ coords[i].mail +'" target="_blank">'+ coords[i].mail + '</a>',
-    //         balloonContentFooter: '<a href="tel:'+ coords[i].phone + '">'+ coords[i].phone + '</a>'
-    //         })
-    //     );
-    // }
-
     var myGeoObjects = [];
 
     for (var i = 0; i<coords.length; i++) {

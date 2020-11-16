@@ -894,6 +894,11 @@ a:not([class]) {
         &:last-child {
             margin-bottom: 40px;
         }
+
+        &:focus {
+            background-color: #f7f7f7;
+            color: #333;
+        }
     }
 
     &__btn {

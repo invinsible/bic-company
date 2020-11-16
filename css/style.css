@@ -1115,6 +1115,11 @@ a:not([class]):hover {
   margin-bottom: 40px;
 }
 
+.service-form__input:focus {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
 .service-form__btn {
   padding: 7px 35px;
   -ms-flex-item-align: center;
