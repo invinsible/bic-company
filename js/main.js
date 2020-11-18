@@ -1,4 +1,7 @@
 const acBtns = document.querySelectorAll('.accordion__btn');
+const header = document.querySelector(".header");
+const upBtn = document.querySelector('.upBtn');
+const logo = document.querySelector('.logo img');
 
 for (let i = 0; i < acBtns.length; i++) {
     acBtns[i].addEventListener('click', function(){
@@ -12,7 +15,44 @@ for (let i = 0; i < acBtns.length; i++) {
     });
 }
 
+
+    
+window.addEventListener('scroll', trackScroll);
+window.addEventListener('scroll', stickHeader);
+upBtn.addEventListener('click', backToTop);
+
+function trackScroll() {
+    let scrolled = window.pageYOffset;
+    let coords = document.documentElement.clientHeight;
+
+    if (scrolled > coords) {
+        upBtn.classList.remove('hide');
+    }
+    if (scrolled < coords) {
+        upBtn.classList.add('hide');
+    }
+}
+
+function backToTop() {
+    if (window.pageYOffset > 0) {
+    window.scrollBy(0, -80);
+    setTimeout(backToTop, 10);
+    }
+}
+
+
+let sticky = header.offsetTop;
+
+function stickHeader() {
+    if (window.pageYOffset > 130) {        
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
 $(document).ready(function (){
+    
 
     const partnerKey = $('.partners__item:nth-child(5)');
     partnerKey.nextAll().hide();
@@ -24,7 +64,9 @@ $(document).ready(function (){
 
     $('.scrollLink').click(function (e){
         e.preventDefault();
+        $('.scrollLink').parent().removeClass('active');
         let href = $(this).attr('href');
+        $(this).parent().addClass('active');
         $('html, body').animate({
             scrollTop: $(href).offset().top
         }, 1000);
@@ -41,6 +83,16 @@ $(document).ready(function (){
             
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
+    });
+
+    $('.phone__link').click(function(e){
+        e.preventDefault();
+        $('.phone__link').removeClass('active');
+        $(this).addClass('active');
+        let phone = $(this).data('phone');
+       
+        $('.phone__number').text(phone);
+        $('.phone__number').attr('href', phone);
     });
 });
 
@@ -99,6 +151,13 @@ ymaps.ready(function(){
             adress: 'Нарвский пр., д. 14',
             mail: 'service@bic-video.ru',            
             phone: '+7 (812) 747-32-66'
+        },
+        {
+            cd: [ 55.778327266001924,37.69620366864765 ],
+            title: 'БИК Московский офис',
+            adress: 'ул. Большая Почтовая дом 55/59 строение 1 офис 744',
+            mail: 'msk@bic-video.ru',            
+            phone: '+7 (495) 645-23-92'
         }
       ];
 
@@ -111,7 +170,7 @@ ymaps.ready(function(){
         balloonContentFooter: '<a href="tel:'+ coords[i].phone + '">'+ coords[i].phone + '</a>'
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '/img/location_mark.svg',
+        iconImageHref: '/img/location_mark.png',
         iconImageSize: [41, 58],
         iconImageOffset: [0, -58]        
     });
@@ -122,6 +181,6 @@ ymaps.ready(function(){
     myMap.geoObjects.add(myClusterer);
    
       
-    //myMap.geoObjects.add(myCollection);  
+    myMap.behaviors.disable('scrollZoom');
   
 });
