@@ -386,7 +386,7 @@ a:not([class]) {
     background-image: url('../img/promo_bg.jpg');
     background-repeat: no-repeat;
     background-color: #40454b;
-    background-size: 1590px;
+    background-size: 100%;
     background-position: 33% 0px;
     color: #fff;
     overflow: hidden;
@@ -423,7 +423,11 @@ a:not([class]) {
     &__subtitle {
         margin-top: 24px;
         font-size: 24px;
-    }  
+    }
+    
+    @media(max-width: 900px) {
+        background-size: 1590px;
+    }
     
     @media(max-width: 1165px) {
         height: 630px;
