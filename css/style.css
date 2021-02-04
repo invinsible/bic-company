@@ -994,6 +994,26 @@ a:not([class]):hover {
   }
 }
 
+.bic-inform__adress {
+  padding-left: 30px;
+  margin-top: 55px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  background-image: url("../img/adress_ico.png");
+  background-repeat: no-repeat;
+}
+
+.bic-inform__phone {
+  padding-left: 30px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+  background-image: url("../img/phone_ico_green.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
 @media (max-width: 950px) {
   .bic-inform {
     padding: 45px 0;
@@ -1827,6 +1847,13 @@ a:not([class]):hover {
 
 .hide, .no-display {
   display: none;
+}
+
+.timing-form,
+.timing-form a {
+  color: #fff;
+  font-weight: 500;
+  line-height: 23px;
 }
 
 .goodSubmit {
