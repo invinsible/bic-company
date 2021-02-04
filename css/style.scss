@@ -829,6 +829,83 @@ a:not([class]) {
     }
 }
 
+.bic-tec {
+
+    &__wrapper {
+        margin-bottom: 45px;
+        display: flex;
+        justify-content: space-between;
+
+        .title {
+            margin-bottom: 0;
+        }
+    
+        @media(max-width: 960px) {
+            flex-direction: column;
+        }
+    }
+
+    &__decription {
+        margin-top: 50px;
+        width: 60%;
+    
+        &__big-text {
+            margin-bottom: 24px;
+            font-size: 1.5em;
+        }
+    
+        @media(max-width: 960px) {
+            width: 100%;
+        }
+    
+        @media(max-width: 560px) {
+            margin-top: 15px;
+        }
+    }
+
+    &__big-text {
+        margin-bottom: 24px;
+        font-size: 1.5em;
+    }
+
+    &__list {
+        padding-left: 0;
+        margin-bottom: 60px;
+        display: flex;
+        align-items: flex-start;        
+    
+        @media(max-width: 960px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        width: 25%;
+        
+        @media(max-width: 960px) {
+            margin-bottom: 15px;
+            width: 35%;
+        }
+
+        @media(max-width: 560px) {
+            width: 50%;
+        }
+    }
+
+    &__img {
+        margin: 0 auto 8px;
+    }
+
+    &__text {
+        font-size: 1.3em;
+        text-align: center;
+
+        @media(max-width: 960px) {
+            font-size: 1.1em;
+        }
+    }
+}
+
 
 .cctvlens {
     padding: 70px 0 40px;
