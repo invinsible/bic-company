@@ -1576,7 +1576,7 @@ a:not([class]):hover {
 }
 
 .vacancy {
-  padding: 70px 0 45px;
+  padding: 0px 0 45px;
 }
 
 .vacancy__text {
