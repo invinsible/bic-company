@@ -52,15 +52,26 @@ function stickHeader() {
 }
 
 $(document).ready(function (){
-    
 
-    const partnerKey = $('.partners__item:nth-child(5)');
-    partnerKey.nextAll().hide();
-    $('.showMore').click(function(){
-        partnerKey.nextAll().show();
-        $(this).prop('disabled', true)
-    });   
+    $(".service-form__btn").prop('disabled',false)
 
+    $('.service-form').submit(function(e){
+        e.preventDefault();
+        let $form = $(this);
+        
+        $.ajax({
+            method: $form.attr('method'),
+            url: $form.attr('action'),
+            data: $form.serialize(),
+            success: (function() {
+                $($form).find('.goodSubmit').css('display', 'flex');                
+            })
+        })
+    });
+
+    $('.showModal').click(function(){
+        $('.service-form').fadeToggle();
+    });
 
     // Cache selectors
     var lastId,
@@ -206,13 +217,13 @@ ymaps.ready(function(){
         balloonContentFooter: '<a href="tel:'+ coords[i].phone + '">'+ coords[i].phone + '</a>'
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '/img/location_mark.png',
+        iconImageHref: './img/location_mark.png',
         iconImageSize: [41, 58],
         iconImageOffset: [0, -58]        
     });
     }
 
-    var myClusterer = new ymaps.Clusterer({preset: 'islands#invertedDarkGreenClusterIcons'});
+    var myClusterer = new ymaps.Clusterer({preset: 'islands#invertedBlackClusterIcons'});
     myClusterer.add(myGeoObjects);
     myMap.geoObjects.add(myClusterer);
    

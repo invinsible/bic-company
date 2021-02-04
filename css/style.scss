@@ -383,7 +383,7 @@ a:not([class]) {
 .promo {
     position: relative;
     height: 980px;
-    background-image: url('../img/promo_bg.jpg');
+    background-image: url('../img/promo-bg.jpg');
     background-repeat: no-repeat;
     background-color: #40454b;
     background-size: 100%;
@@ -398,9 +398,9 @@ a:not([class]) {
         align-items: center;
         z-index: 2;
 
-        @media(max-width: 840px) {
+        @media (max-width: 840px) {
             padding: 0 30px;
-            flex-direction: column;            
+            flex-direction: column;
         }
     }
 
@@ -415,7 +415,7 @@ a:not([class]) {
             margin-top: 300px;
             margin-bottom: 40px;
             max-width: 100%;
-        }        
+        }
     }
 
     &__title {
@@ -428,14 +428,16 @@ a:not([class]) {
         &::before {
             content: '';
             position: absolute;
-            left:0;
+            left: 0;
             top: 0;
             width: 12px;
             height: 100%;
             background-color: #3c8a78;
 
-            @media(max-width: 530px) {
-                width: 8px;           
+            @media (max-width: 530px) {
+                .promo__title::before {
+                    width: 8px;
+                }
             }
         }
 
@@ -444,12 +446,12 @@ a:not([class]) {
         }
 
         @media(max-width: 530px) {
-            font-size: 45px;            
+            font-size: 45px;
         }
 
         @media(max-width: 380px) {
-            padding-left: 15px;    
-            font-size: 35px;     
+            padding-left: 15px;
+            font-size: 35px;
         }
     }
 
@@ -457,11 +459,11 @@ a:not([class]) {
         margin-top: 24px;
         font-size: 24px;
 
-        @media(max-width: 600px) {
+        @media (max-width: 600px) {
             font-size: 18px;
         }
     }
-
+    
     &__links {
         position: absolute;
         left: 0;
@@ -498,9 +500,9 @@ a:not([class]) {
             display: block;
             color: #fff;
             background-color: rgba(63, 77, 96, 0.45);
-
-            &:hover > .promo-list__text{                 
-                display: flex;                
+            
+            &:hover > .promo-list__text {
+                display: flex;
             }
 
             @media(max-width: 990px) {
@@ -514,11 +516,11 @@ a:not([class]) {
             }
 
             @media(max-width: 450px) {
-                padding: 13px 19px;
+                padding: 13px 19px;                
             }
         }
-        
-        .link-ico  {
+
+        .link-ico {
             width: 160px;
             color: #fff;
 
@@ -537,10 +539,10 @@ a:not([class]) {
             }
 
             @media(max-width: 840px) {
-                margin-bottom: 0;            
+                margin-bottom: 0;
             }
 
-            @media(max-width: 450px) {
+            @media(max-width: 420px) {
                 font-size: 14px;
             }
         }
@@ -554,18 +556,18 @@ a:not([class]) {
             height: 100%;
             display: none;
             align-items: center;
-            background-color: #3c8a78;
+            background-color: #3c8a78;            
         }
 
         @media(max-width: 840px) {
             flex-direction: column;
         }
     }
-
+    
     @media(max-width: 1165px) {
         height: 630px;
     }
-    
+
     @media(max-width: 900px) {
         background-size: cover;
     }
@@ -573,8 +575,6 @@ a:not([class]) {
     @media(max-width: 840px) {
         height: auto;
     }
-    
-    
 }
 
 .video {
@@ -1437,25 +1437,13 @@ a:not([class]) {
         .link-ico {
             margin-right: 50px;
 
-
-
             &:hover {
                 padding-left: 25px;
             }
 
-            @media(max-width: 930px) {                
-                margin-right: 60px;
-                margin-top: 10px;
+            @media(max-width: 930px) {
+                margin-right: 20px;
             }
-        }
-
-        @media(max-width: 930px) {
-            display: flex;
-            flex-direction: column;
-        }
-
-        @media(max-width: 480px) {
-            margin-top: 20px;
         }
     }
 }
@@ -1490,14 +1478,3 @@ a:not([class]) {
 .ymaps-2-1-77-map-copyrights-promo {
     display: none;
 }
-
-.block {
-    position: relative;
-    margin-top: 40px;
-    width: 200px;
-    height: 300px;
-    background-color: #ccc;
-
-    clip-path: polygon(85% 0, 100% 13%, 100% 100%, 13% 100%, 0 85%, 0 0);    
-}
-
