@@ -1320,6 +1320,7 @@ a:not([class]):hover {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    text-align: center;
   }
 }
 
@@ -1377,6 +1378,7 @@ a:not([class]):hover {
 }
 
 .service-form {
+  position: relative;
   padding: 50px 43px 43px 50px;
   max-width: 420px;
   display: -webkit-box;
@@ -1459,9 +1461,22 @@ a:not([class]):hover {
 
 @media (max-width: 990px) {
   .service-form {
+    display: none;
     padding: 25px 30px;
     margin: 0 auto;
     max-width: 90%;
+  }
+}
+
+@media (min-width: 990px) {
+  .showModal {
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  .showModal {
+    margin-bottom: 20px;
   }
 }
 
@@ -1810,8 +1825,29 @@ a:not([class]):hover {
   background: #e9ebec;
 }
 
-.hide {
+.hide, .no-display {
   display: none;
+}
+
+.goodSubmit {
+  padding: 50px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  background-color: #3c8a78;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
 }
 
 .ymaps-2-1-77-map-copyrights-promo {

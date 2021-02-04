@@ -1053,6 +1053,7 @@ a:not([class]) {
         @media(max-width: 990px) {            
             width: 100%;
             order: 2;
+            text-align: center;
         }
     }
 
@@ -1100,6 +1101,7 @@ a:not([class]) {
 }
 
 .service-form {
+    position: relative;
     padding: 50px 43px 43px 50px;
     max-width: 420px;
     display: flex;
@@ -1157,10 +1159,23 @@ a:not([class]) {
         }
     }
 
-    @media(max-width: 990px) {   
+    @media(max-width: 990px) {
+        display: none;
         padding: 25px 30px;         
         margin: 0 auto;
         max-width: 90%;
+    }
+}
+
+@media(min-width: 990px) {
+    .showModal {
+      display: none;
+    }
+}
+
+@media(max-width: 990px) {
+    .showModal {
+        margin-bottom: 20px;
     }
 }
 
@@ -1469,11 +1484,26 @@ a:not([class]) {
     }
 }
 
-.hide {
+.hide, .no-display {
     display: none;
 }
 
-
+.goodSubmit {
+    padding: 50px;
+    display: none;
+    align-items: center;
+    font-size: 24px;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+    position: absolute;
+    background-color: #3c8a78;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+}
 
 .ymaps-2-1-77-map-copyrights-promo {
     display: none;
