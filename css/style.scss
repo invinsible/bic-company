@@ -1612,3 +1612,71 @@ a:not([class]) {
 .ymaps-2-1-77-map-copyrights-promo {
     display: none;
 }
+
+.table {
+    width: 100%;    
+    border-collapse: collapse;
+
+    td {
+        padding: 5px 12px;
+        font-size: 13px;
+        line-height: 1.4;
+        color: #15284e;    
+        
+        @media(max-width: 500px) {
+          padding: 5px 2px; 
+          font-size: 12px;
+        }
+    }    
+
+    tr:hover {
+        background-color: #efefef;
+    }
+
+    &-first {
+        text-align: center;
+
+        td {
+            font-weight: 600;
+            padding: 10px 2px;
+            
+            
+            span {
+              display: block;
+            }
+        }
+
+        td:first-child {
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background-color: transparent!important;
+        }
+        
+    }
+
+    &-body {
+        text-align: center;
+
+        td {
+            border-right: 1px solid #d2d2d2;
+            border-bottom: 1px solid #d2d2d2;
+        }
+
+        td:first-child {
+            text-align: left;
+        }
+
+        td:last-of-type {
+            border-right: 0;
+        }
+    }
+
+    &-title {
+        background-color: #ededed;
+        text-align: left;
+        text-transform: uppercase;
+    }
+}
